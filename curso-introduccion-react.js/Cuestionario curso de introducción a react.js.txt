@@ -1,0 +1,54 @@
+1.¿Para qué sirven los portales en React?
+Para teletransportar componentes a un nodo de HTML distinto al nodo donde hace render el resto de la aplicación.
+2.¿Cómo creamos un portal en React?
+ReactDOM.createPortal
+3.¿Cómo creamos un contexto en React?
+React.createContext
+4.¿Para qué sirve React Context?
+Para comunicar componentes sin tener que pasar la información como props por cada componente intermedio.
+5.¿Qué es JSX?
+Una sintaxis especial de JavaScript para escribir elementos y componentes de React que se siente como HTML.
+6.¿Qué es el estado en React?
+La forma en que React guarda información de nuestro componente para escuchar cuando tenga cambios y disparar un nuevo render.
+7.¿Qué son las props en React?
+La forma de comunicar componentes entre sí para transportar información.
+8.¿Cuál es la diferencia entre componentes y elementos en React?
+Los componentes son grupos de elementos, reciben props y pueden crear estado o efectos. Los elementos reciben atributos o eventos y (casi siempre) se transforman en etiquetas de HTML.
+9.¿Qué es Create React App?
+Una herramienta "atajo" para crear entornos de desarrollo completos en React extremadamente flexible para optimizaciones.
+Una herramienta “atajo” para crear entornos de desarrollo completos en React que es muy fácil de configurar y flexible para optimizaciones.
+REPASAR CLASE
+10.¿Por qué debemos compilar nuestro proyecto con React.js antes de subirlo a GitHub Pages?
+Porque GitHub Pages solo nos permite desplegar aplicaciones estáticas.
+11.¿Cuál de las siguientes es una forma VÁLIDA de crear un estado en React?
+const [nombreDelEstado, setNombreDelEstado] = React.useState("valor inicial de estado");
+12.¿Podemos crear más de un estado en nuestros componentes de React?
+Verdadero
+13.¿Qué son los eventos en React?
+La forma de recibir/escuchar/reacionar ante las acciones o interacciones de los usuarios en nuestra aplicación.
+14.¿Cómo escuchamos el evento de click en un botón con React?
+onClick
+15.¿Cómo escuchamos cuando un usuario escriba en un input o textarea con React?
+onChange
+16.¿Cómo escuchamos cuando los usuarios envíen un formulario con React?
+onSubmit
+17.¿Para qué sirven los efectos en React?
+Para ejecutar bloques de código (el primer argumento del efecto) dentro de un componente únicamente si cumple cierta validación (el segundo argumento del efecto) en cada nuevo render.
+18.¿Cuándo se ejecuta React.useEffect?
+Justo ANTES de renderizar el componente en el navegador.
+19.¿Cuándo se ejecuta React.useLayoutEffect?
+Justo DESPUÉS de renderizar el componente en el navegador.
+20.¿Qué propiedad debemos enviarle al Provider de un contexto en React para consumirlo desde su respectivo Consumer?
+value
+21.¿Cómo usamos React Context con la sintaxis de React Hooks?
+useContext(Contexto)
+22.¿React es un framework o una librería?
+React es mucho más librería que framework, pero ninguna herramienta es 100% framework o librería.
+23.¿Qué significa el "ecosistema de React"?
+Todas las herramientas open-source (únicamente las oficiales) relacionadas a React.
+Todas las herramientas que usa React por dentro para construir su propio código fuente.
+REPASAR CLASE
+24.¿Cómo podemos enviar información de un componente "abuelo" a un componente "nieto" sin necesidad de pasar las props por el componente "hijo/padre"?
+Usando React Context.
+25.¿Cuál de los siguientes bloques de código ejecuta nuestro efecto únicamente la primera vez que se renderiza nuestro componente? (pista: examina el segundo argumento del efecto)
+React.useEffect(() => { console.log("Efectito"); }, []);

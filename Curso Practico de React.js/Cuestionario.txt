@@ -1,0 +1,69 @@
+1. ¿Qué es React.js?
+Una librería de JavaScript para construir interfaces de usuario.
+
+2. Si nos basamos en el patrón MVC (modelo-vista-controlador), ¿de cuál se encarga React.js?
+Vista
+
+3. React.js nos permite construir interfaces con base en:
+Componentes
+
+4. ¿Cuál es la súper empresa encargada de construir React.js?
+Facebook
+
+5. ¿Qué es JSX?
+El sistema de plantillas de React que transforma JavaScript en modificaciones al DOM.
+El sistema de componentes de React que transforma clases y funciones en componentes.
+REPASAR CLASE
+
+6. ¿Qué es el Virtual DOM?
+Una copia o representación del DOM para evitar cambios innecesarios en el DOM real.
+
+7. ¿Cómo creamos un elemento de React que se transforme en un DIV con la clase "container" usando JSX?
+<div className="container"></div>
+
+8. ¿Cómo creamos un elemento de React que se transforme en un input de tipo texto usando JSX?
+<input type=“text” />
+
+9. ¿Cuáles son las herramientas indispensables que debemos instalar para usar React en una aplicación web?
+react y react-dom
+
+10. ¿Cómo renderizamos el componente principal de nuestra aplicación con React?
+ReactDOM.render()
+
+11. Escalar nuestro proyecto será mucho más fácil si usamos Create React App en vez de configurar manualmente Webpack y Babel. Esta afirmación es:
+Falsa
+
+12. Teniendo lo siguiente:
+const App = () => {
+  return (
+    <Layout>
+      <Login />
+    </Layout>
+  );
+}
+¿Cuál es el código correcto del componente Layout?
+const Layout = ({ children }) => { return (
+    <divclassname="Layout">{children}</div>
+); }
+
+13. ¿Qué es React Router DOM?
+La herramienta más popular de React para separar nuestra aplicación entre páginas / rutas.
+
+14. ¿Cuál es la forma correcta crear un 404 con React Router DOM?
+Dentro de los componentes BrowserRouter y Switch. De último lugar con las demás rutas de la aplicación. Y con <Route path="*" component={NotFound} />.
+
+15. ¿Qué herramienta de React nos permite trabajar con el estado en nuestros componentes?
+React.useState
+
+16. ¿Qué herramienta de React nos permite compartir un estado con todos los componentes de la aplicación?
+React.Context
+
+17. ¿Cuál es la forma correcta de actualizar un estado cuando los usuarios den click en un botón?
+const Button = () => {
+  const [count, setCount] = React.useState(1);
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      ¡Click!
+    </button>
+  );
+}
