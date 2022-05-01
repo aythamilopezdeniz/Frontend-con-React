@@ -1,0 +1,74 @@
+# Listar paquetes instalados de forma global
+npm list -g --depth 0
+
+# Simula las depencias a instalar.
+npm install <package> --dry-run
+
+# Intala los paquetes en una versión específica.
+npm install <package>@<version> –o
+
+# Fuerza la instalación de paquetes.
+npm install <package> –f
+
+# Instala depencias pero son consideradas como opcionales.
+npm install <package> –O
+
+Actualizar paquetes
+    # Revisar que paquetes disponen de nuevas versiones
+    npm outdate
+
+    # Para ver un output más detallado
+    npm outdate --dd
+
+    # Actualizar los paquetes que no están en la ultima versión
+    npm update
+
+    # Actualizar un paquete especifico
+    npm install json-server@latest
+
+Eliminar paquetes
+    # Eliminar un paquete de node_modules y del archivo package.json
+    npm uninstall [paquete]
+
+    # Desinstalar un paquete de todo node_modules pero no del archivo package.json
+    npm uninstall [paquete] --no-save
+
+# Mostrar información de lo que está haciendo
+npm run [script-name] --dd
+
+# Archivos de node_module no estén bien intalados o tengas una versión anterior
+npm cache clean --force
+
+# Verificar que se eliminó
+npm cache verify
+
+# Borrado de directorio node_module de forma segura
+(Se necesita instalar esta dependencia)
+    sudo npm install -g rimraf 
+    rimraf node_module
+
+# Ver vulnerabilidades
+npm audit
+
+# Ver vulnerabilidades en formato json
+npm audit --json
+
+# Conocemos vulnerabilidades, procede a actualizar paquetes (instalar todas sus dependencias)
+npm update eslint-utils --depth 2
+
+# Soluciona vulnerabilidades que tenga un proyecto
+npm audit fix
+
+# Herramienta que garantiza tiener siempre actualizada nuestras dependencias del proyecto
+https://snyk.io
+
+# Publicar paquetes
+npm publish
+    flags
+    --access=public (paquete público)
+
+# Publicar versión
+npm version 
+    |-> patch(parches)
+    |-> minor(cambios pequeños)
+    |-> major(cambios grandes)
